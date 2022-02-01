@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* good luck :) */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slid {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 14.2vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all .3s ease-in;
+    animation: img-animat calc(.8s * var(--i)) ease-in;
+}
+
+img {
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease-in .3s;
+}
+
+.slid:hover {
+    width: 30vw;
+}
+
+img:hover {
+    width: 30vw;
+    opacity: .5;
+    transform: scale(1.2) rotate(10deg);
+}
+
+@keyframes img-animat {
+    0% {
+        opacity: 0;
+        transform: translateY(-100vh)
+    }
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
